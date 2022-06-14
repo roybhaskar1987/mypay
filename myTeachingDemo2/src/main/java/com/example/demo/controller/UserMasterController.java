@@ -35,10 +35,15 @@ public String printMyName()
 	{
 		return "Divyansh";
 	}
-   
-  
-   
-   @PostMapping("/restful/createUser")
+	@GetMapping("/home")
+	public String printMyName1()
+	{
+		return "Divyansh";
+	}
+
+
+
+	@PostMapping("/restful/createUser")
 	public ResponseEntity<Object> createUser(@Validated @RequestBody UserMasterVo user){
 		
 		boolean savedUser= userMasterDaoExtention.save(user) ;
